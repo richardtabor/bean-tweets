@@ -76,7 +76,7 @@ private $bean_twitter_oauth = array();
 		echo '</ul>';
 	
 		if( !empty($instance['tweettext']) ) {
-			echo '<a class="twitter-link" href="http://twitter.com/' . $instance['username'] . '">' . $instance['tweettext'] . '</a>';
+			echo '<a class="follow-link button" href="http://twitter.com/' . $instance['username'] . '">' . $instance['tweettext'] . '</a>';
 		}
 	
 		echo $after_widget;
@@ -380,13 +380,13 @@ function bean_tweets_settings_render_admin_page()
 
 	echo '<div class="wrap">';
 	 	screen_icon();
-		echo '<h2>Bean Tweets Settings</h2>';
-		echo '<div class="content-wrap" style="margin: 20px 5px; width: 70%;">';
+		echo '<h2>Bean Tweets Plugin</h2>';
+		echo '<div class="wrap">';
 			echo '<form method="post" action="options.php">';
-				echo '<h4>' . __('Initial Setup.', 'bean' ) . '</h4>';
-				echo '<p>' . __('The Bean Tweets plugin allows you to display your most recent tweets. In order to do this, you must first create a Twitter application and insert the required codes below. Then, simply add the Bean Tweets widget to a widget area within your Widgets Dashboard. If you need additional help, we wrote a detailed <strong><a href="http://themebeans.com/how-to-create-access-tokens-for-twitter-api-1-1/" target="_blank">OAuth Guide</a></strong> to help you along. Cheers!', 'bean' ) . '</p></br>';
 				
-				echo '<h4>' . __('How To.', 'bean' ) . '</h4>';
+				echo '<p>' . __('Display your most recent tweets throughout your theme with the Bean Tweets widget. In order to do this, you must first create a Twitter application and insert the required codes below. Then, simply add the Bean Tweets widget to a widget area within your Widgets Dashboard. If you need additional help, we wrote a detailed <strong><a href="http://themebeans.com/how-to-create-access-tokens-for-twitter-api-1-1/" target="_blank">OAuth Guide</a></strong> to help you along. Cheers!', 'bean' ) . '</p></br>';
+				
+				echo '<h4 style="font-size: 15px; font-weight: 600; color: #222; margin-bottom: 10px;">' . __('How To.', 'bean' ) . '</h4>';
 				echo '<ol>';
 					echo '<li><a href="https://dev.twitter.com/apps/new" target="_blank">' . __( 'Create a Twitter application', 'bean' ) . '</a></li>';
 					echo '<li>' . __( 'Fill in all fields on the create application page.', 'bean' ) . '</li>';
@@ -400,7 +400,7 @@ function bean_tweets_settings_render_admin_page()
 	
 				settings_fields('bean_tweets_settings');
 				
-				echo '<h4 style="margin-bottom: 7px">' . __('OAuth Codes.', 'bean' ) . '</h4>';
+				echo '<h4 style="font-size: 15px; font-weight: 600; color: #222; margin-bottom: 7px;">' . __('OAuth Codes.', 'bean' ) . '</h4>';
 				
 				echo '<table>';
 					foreach($settings as $setting) {
