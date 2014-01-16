@@ -1,0 +1,10 @@
+JAN 1 2014 - Version 2.1
+<ul>
+<li>Added a Plugin Updater. Nice!</li>
+</ul>
+
+DEC 12 2013 - Version 2.0
+<ul>
+<li>Moved settings from widget to WP Dashboard</li>
+<li>oAuth Overhaul</li>
+</ul>
