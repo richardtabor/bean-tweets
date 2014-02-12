@@ -387,31 +387,6 @@ function bean_tweets_admin_page()
 		echo '<div class="wrap">'; 
 		echo '<p>' . __('Display your most recent tweets throughout your theme with the Bean Tweets widget. In order to do this, you must first create a Twitter application and insert the required codes below. Then, simply add the Bean Tweets widget to a widget area within your Widgets Dashboard. If you need additional help, we wrote a detailed <strong><a href="http://themebeans.com/how-to-create-access-tokens-for-twitter-api-1-1/" target="_blank">OAuth Guide</a></strong> to help you along. Cheers!', 'bean' ) . '</p></br>';
 		?>
-		
-		
-		<h4 style="font-size: 15px; font-weight: 600; color: #222; margin-bottom: 10px;"><?php _e('Activate License'); ?></h4>
-			<p>Enter the license key <code style="padding: 1px 5px 2px; background-color: #FFF; border-radius: 2px; font-weight: bold; font-family: 'Open Sans',sans-serif;">BEANTWEETS</code>, hit Save, then Activate, to turn on the plugin updater. You'll then be able to update this plugin from your Plugins Dashboard when future updates are available.</p>
-	
-	        	<form method="post" action="options.php">
-	        		<?php settings_fields('edd_beantweets_license'); ?>
-	        		<input id="edd_beantweets_license_key" name="edd_beantweets_license_key" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
-	        			<?php if( $status !== false && $status == 'valid' ) { ?>
-	        				<?php wp_nonce_field( 'edd_beantweets_nonce', 'edd_beantweets_nonce' ); ?>
-	        				<input type="submit" class="button-secondary" name="edd_beantweets_license_deactivate" style="outline: none!important;" value="<?php _e('Deactivate License'); ?>"/>
-	        				<span style="color: #7AD03A;"><?php _e('&nbsp;&nbsp;Good to go!'); ?></span>
-	        			<?php } else {
-	        				wp_nonce_field( 'edd_beantweets_nonce', 'edd_beantweets_nonce' ); ?>
-	        				<input type="submit" name="submit" id="submit" class="button button-secondary" value="Save License Key">
-	        				<input type="submit" class="button-secondary" name="edd_beantweets_license_activate" style="outline: none!important;" value="<?php _e('Activate License'); ?>"/>
-	        				<span style="color: #DD3D36;"><?php _e('&nbsp;&nbsp;Inactive'); ?></span>
-	        			<?php } ?>
-	        	</form>
-	
-	 			<br />
-	         	<br />
-		
-		
-		
 			<?php
 			echo '<form method="post" action="options.php">';
 				

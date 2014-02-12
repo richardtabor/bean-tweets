@@ -1,3 +1,9 @@
+FEB 12 2014 - Version 2.2
+<ul>
+<li>Added support for auto activation</li>
+<li>Removed license input from settings</li>
+</ul>
+
 JAN 1 2014 - Version 2.1
 <ul>
 <li>Added a Plugin Updater. Nice!</li>
