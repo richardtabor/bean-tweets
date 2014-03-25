@@ -1,6 +1,11 @@
+FEB 12 2014 - Version 2.2.1
+<ul>
+<li>Support for speacial characters</li>
+</ul>
+
 FEB 12 2014 - Version 2.2
 <ul>
-<li>Added support for auto activation</li>
+<li>Support for auto activation</li>
 <li>Removed license input from settings</li>
 </ul>
 
