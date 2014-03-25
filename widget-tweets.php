@@ -252,7 +252,7 @@ private $bean_twitter_oauth = array();
 	
 			$tweets[] = array(
 				'timestamp' => $timestamp,
-				'text' => filter_var($result['text'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
+				'text' => filter_var($result['text'], FILTER_SANITIZE_STRING),
 				'id' => $result['id_str']
 			);
 		}
