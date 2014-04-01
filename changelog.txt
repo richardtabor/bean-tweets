@@ -1,6 +1,6 @@
 APR 1 2014 - Version 2.2.1
 <ul>
-<li>Support for speacial characters</li>
+<li>Support for special characters</li>
 </ul>
 
 FEB 12 2014 - Version 2.2
