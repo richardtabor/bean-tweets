@@ -29,6 +29,31 @@ define('BEAN_TWEETS_PATH', plugin_dir_url( __FILE__ ));
 
 
 
+/*===================================================================*/
+/*
+/* PLUGIN FEATURES SETUP
+/*
+/*===================================================================*/
+
+$bean_plugin_features[ plugin_basename( __FILE__ ) ] = array(
+        "updates"       => true    // Whether to utilize plugin updates feature or not
+    );
+
+
+if ( ! function_exists( 'bean_plugin_supports' ) ) {
+    function bean_plugin_supports( $plugin_basename, $feature ) {
+        global $bean_plugin_features;
+
+        $setup = $bean_plugin_features;
+
+        if( isset( $setup[$plugin_basename][$feature] ) && $setup[$plugin_basename][$feature] )
+            return true;
+        else
+            return false;
+    }
+}
+
+
 
 /*===================================================================*/
 /*
@@ -38,6 +63,8 @@ define('BEAN_TWEETS_PATH', plugin_dir_url( __FILE__ ));
 define( 'EDD_BEANTWEETS_TB_URL', 'http://themebeans.com' );
 define( 'EDD_BEANTWEETS_NAME', 'Bean Tweets' );
 
+if ( bean_plugin_supports ( plugin_basename( __FILE__ ), 'updates' ) ) : // check to see if updates are allowed; only import if so
+
 //LOAD UPDATER CLASS
 if( !class_exists( 'EDD_SL_Plugin_Updater' ) ) 
 {
@@ -45,6 +72,9 @@ if( !class_exists( 'EDD_SL_Plugin_Updater' ) )
 }
 //INCLUDE UPDATER SETUP
 include( dirname( __FILE__ ) . '/updates/EDD_SL_Activation.php' );
+
+
+endif; // END if ( bean_plugin_supports ( plugin_basename( __FILE__ ), 'updates' ) )
 
 
 /*===================================================================*/
@@ -59,6 +89,9 @@ add_action( 'init', 'beantweets_license_setup' );
 
 function edd_beantweets_plugin_updater() 
 {
+    // check to see if updates are allowed; don't do anything if not
+    if ( ! bean_plugin_supports ( plugin_basename( __FILE__ ), 'updates' ) ) return;
+
 	//RETRIEVE LICENSE KEY
 	$license_key = trim( get_option( 'edd_beantweets_activate_license' ) );
 
