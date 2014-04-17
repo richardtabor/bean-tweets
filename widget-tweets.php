@@ -34,10 +34,10 @@ private $bean_twitter_oauth = array();
 	{
 		parent::__construct(
 			'bean_tweets', // BASE ID
-			__('Bean Tweets (ThemeBeans)', 'bean'), // NAME
+			__('Bean Tweets', 'bean'), // NAME
 			array(
 				'classname' => 'widget_bean_tweets',
-				'description' => __('A widget that displays your most recent tweets', 'bean')
+				'description' => __('Displays your Twitter feed.', 'bean')
 			)
 		);
 	}
