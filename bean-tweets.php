@@ -3,8 +3,8 @@
  * Plugin Name: Bean Tweets
  * Plugin URI: http://themebeans.com/plugin/bean-twitter-widget/?ref=plugin_bean_tweets
  * Description: Enables a Twitter widget using Twitter API v1.1. You must create a <a href="https://dev.twitter.com/apps/">Twitter App</a> to retrieve access tokens. <a href="http://themebeans.com/how-to-create-access-tokens-for-twitter-api-1-1/">Learn More</a>
- * Version: 2.2.1
- * Author: Rich Tabor / ThemeBeans
+ * Version: 2.2.2
+ * Author: ThemeBeans
  * Author URI: http://www.themebeans.com/?ref=plugin_bean_tweets
  *
  *
@@ -36,7 +36,7 @@ define('BEAN_TWEETS_PATH', plugin_dir_url( __FILE__ ));
 /*===================================================================*/
 
 $bean_plugin_features[ plugin_basename( __FILE__ ) ] = array(
-        "updates"       => true    // Whether to utilize plugin updates feature or not
+        "updates"  => false // Whether to utilize plugin updates feature or not
     );
 
 
@@ -96,8 +96,8 @@ function edd_beantweets_plugin_updater()
 	$license_key = trim( get_option( 'edd_beantweets_activate_license' ) );
 
 	$edd_updater = new EDD_SL_Plugin_Updater( EDD_BEANTWEETS_TB_URL, __FILE__, array( 
-			'version' 	=> '2.2.1',
-			'license' 	=> $license_key,
+			'version' => '2.2.2',
+			'license' => $license_key,
 			'item_name' => EDD_BEANTWEETS_NAME,
 			'author' 	=> 'Rich Tabor / ThemeBeans'
 		)
