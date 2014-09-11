@@ -129,7 +129,7 @@ private $bean_twitter_oauth = array();
 	
 		//IF SETTINGS ARE EMPTY
 		if( empty($access_token) || empty($access_token_secret) || empty($consumer_key) || empty($consumer_key_secret) ) {
-			echo '<p><a href="options-general.php?page=bean-tweets-plugin-settings">Configure Twitter Widget</a></p>'; 
+			echo '<p><a href="options-general.php?page=bean-tweets">Configure Twitter Widget</a></p>'; 
 		} else { ?>
 	
 			<p>
@@ -333,7 +333,7 @@ private $bean_twitter_oauth = array();
 function bean_tweets_options_page_settings() 
 {
 	add_options_page(
-		__('Twitter Settings', 'bean'), __('Bean Tweets', 'bean'), 'manage_options', 'bean-tweets-plugin-settings', 'bean_tweets_admin_page'
+		__('Twitter Settings', 'bean'), __('Bean Tweets', 'bean'), 'manage_options', 'bean-tweets', 'bean_tweets_admin_page'
 	);
 } //END bean_tweets_settings
 

@@ -107,6 +107,25 @@ add_action( 'admin_init', 'edd_beantweets_plugin_updater' );
 
 
 /*===================================================================*/
+/* ADD SETTINGS LINK TO PLUGINS PAGE
+/*===================================================================*/
+define( 'BEANTWEETS_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+
+add_filter( 'plugin_action_links', 'beantweets_plugin_action_links', 10, 2 );
+
+function beantweets_plugin_action_links( $links, $file ) {
+	if ( $file != BEANTWEETS_PLUGIN_BASENAME )
+		return $links;
+
+	$settings_link = '<a href="' . menu_page_url( 'bean-tweets', false ) . '">'
+		. esc_html( __( 'Settings', 'bean-tweets' ) ) . '</a>';
+
+	array_unshift( $links, $settings_link );
+
+	return $links;
+}
+
+/*===================================================================*/
 /* DEACTIVATION HOOK - REMOVE OPTION
 /*===================================================================*/
 function beantweets_deactivate() 

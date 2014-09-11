@@ -1,3 +1,14 @@
+SEP 3 2014 - Version 2.2.2
+<ul>
+<li>Performance Improvements</li>
+<li>Added "Settings" link on plugins.php</li>
+</ul>
+
+SEP 3 2014 - Version 2.2.2
+<ul>
+<li>Minor UI Adjustments for WP4.0</li>
+</ul>
+
 APR 24 2014 - Version 2.2.2
 <ul>
 <li>Minor UI Adjustments for WP3.9</li>
