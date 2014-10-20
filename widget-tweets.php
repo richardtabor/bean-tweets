@@ -385,7 +385,7 @@ function bean_tweets_admin_page()
 	 	screen_icon();
 		echo '<h2>Bean Tweets Plugin</h2>';
 		echo '<div class="wrap">'; 
-		echo '<p>' . __('Display your most recent tweets throughout your theme with the Bean Tweets widget. In order to do this, you must first create a Twitter application and insert the required codes below. Then, simply add the Bean Tweets widget to a widget area within your Widgets Dashboard. If you need additional help, we wrote a detailed <strong><a href="http://themebeans.com/how-to-create-access-tokens-for-twitter-api-1-1/" target="_blank">OAuth Guide</a></strong> to help you along. Cheers!', 'bean' ) . '</p></br>';
+		echo '<p>' . __('Display your most recent tweets throughout your theme with the Bean Tweets widget. In order to do this, you must first create a Twitter application and insert the required codes below. Then, simply add the Bean Tweets widget to a widget area within your Widgets Dashboard. If you need additional help, we wrote a detailed <strong><a href="http://themebeans.com/tutorials/create-your-access-tokens-for-twitter-api-v1-1/" target="_blank">OAuth Guide</a></strong> to help you along. Cheers!', 'bean' ) . '</p></br>';
 		?>
 			<?php
 			echo '<form method="post" action="options.php">';
